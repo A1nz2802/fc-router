@@ -1,16 +1,7 @@
-import { Switch, Route, Link, useLocation } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
-const useQuery = () => {
-  // Accediendo a los parámetros de la query
-  return new URLSearchParams(useLocation().search)
-}
-
+// Link permite actualizar la URL de nuestra aplicación sin refrescar nuestra app
 const App = () => {
-
-  const query = useQuery();
-  const chancho = query.get('chanchito');
-  const nombre = query.get('nombre');
-  console.log({ chancho, nombre })
   return (
     <div>
       <nav>
